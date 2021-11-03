@@ -100,6 +100,20 @@ You can run the server with any container runtime, like Docker:
     docker run -p 8000:8000 -v /my/data:/data --name rest_server restic/rest-server
 ```
 
+###Using Docker Compose
+
+Edit with your data docker-compose.yml file and run this command for build image: 
+
+```
+docker-compose build
+```
+
+If you prefer build and run rest-server automaticaly run this command: 
+
+```
+docker-compose up -d
+```
+
 Note that:
 
 - **contrary to the defaults** of `rest-server`, the persistent data volume is located to `/data`.

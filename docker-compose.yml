@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  rest-server:
+    container_name: rest-server
+    build: .
+#   environment:                    #Uncomment for disable authentication or add environment vars. 
+#     - DISABLE_AUTHENTICATION=true #
+    ports:
+      - 8000:8000 # rest-server listen port.
+    volumes:
+      - path_to_backups_folder:/data #Path to local filesystem for storage backups.
